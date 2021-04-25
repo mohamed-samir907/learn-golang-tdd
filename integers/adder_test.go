@@ -11,8 +11,14 @@ func TestAdder(t *testing.T) {
 
 	}
 
-	sum := Add(2, 3)
-	expected := 5
+	t.Run("it can add two numbers", func(t *testing.T) {
+		sum := Add(2, 3)
+		expected := 5
 
-	assertEqual(t, sum, expected)
+		assertEqual(t, sum, expected)
+	})
+
+	t.Run("run example add", func(t *testing.T) {
+		ExampleAdd()
+	})
 }
